@@ -1,0 +1,19 @@
+<!doctype html>
+
+<html lang="en">
+@await Html.PartialAsync("_Head")
+
+<body>
+    <div class="page">
+        <!-- Navbar -->
+        @await Html.PartialAsync("_Header")
+        @await Html.PartialAsync("_Menu")
+        <div class="page-wrapper">
+            @RenderBody()
+            @await Html.PartialAsync("_Footer")
+        </div>
+    </div>
+    <script src="~/js/tabler.min.js"></script>
+</body>
+
+</html>

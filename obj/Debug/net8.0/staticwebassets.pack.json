@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\dotnet\\blog\\wwwroot\\css\\custom.css",
+      "PackagePath": "staticwebassets\\css\\custom.css"
+    },
+    {
+      "Id": "F:\\dotnet\\blog\\wwwroot\\css\\tabler.min.css",
+      "PackagePath": "staticwebassets\\css\\tabler.min.css"
+    },
+    {
+      "Id": "F:\\dotnet\\blog\\wwwroot\\images\\avatar.jpg",
+      "PackagePath": "staticwebassets\\images\\avatar.jpg"
+    },
+    {
+      "Id": "F:\\dotnet\\blog\\wwwroot\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\images\\favicon.ico"
+    },
+    {
+      "Id": "F:\\dotnet\\blog\\wwwroot\\images\\logo.svg",
+      "PackagePath": "staticwebassets\\images\\logo.svg"
+    },
+    {
+      "Id": "F:\\dotnet\\blog\\wwwroot\\images\\photo.jpg",
+      "PackagePath": "staticwebassets\\images\\photo.jpg"
+    },
+    {
+      "Id": "F:\\dotnet\\blog\\wwwroot\\js\\tabler.min.js",
+      "PackagePath": "staticwebassets\\js\\tabler.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.blog.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.blog.props",
+      "PackagePath": "build\\blog.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.blog.props",
+      "PackagePath": "buildMultiTargeting\\blog.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.blog.props",
+      "PackagePath": "buildTransitive\\blog.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

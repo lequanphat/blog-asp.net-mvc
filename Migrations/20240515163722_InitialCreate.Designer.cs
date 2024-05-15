@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace blog.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    [Migration("20240511121229_InitialCreate")]
+    [Migration("20240515163722_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -24,7 +24,7 @@ namespace blog.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
-            modelBuilder.Entity("Blog.Models.Blog", b =>
+            modelBuilder.Entity("Blog.Models.Post", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -42,7 +42,7 @@ namespace blog.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Blogs");
+                    b.ToTable("Posts");
                 });
 #pragma warning restore 612, 618
         }

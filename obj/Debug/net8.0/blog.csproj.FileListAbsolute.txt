@@ -250,3 +250,4 @@ F:\dotnet\blog\obj\Debug\net8.0\blog.csproj.Up2Date
 F:\dotnet\blog\obj\Debug\net8.0\blog.RazorAssemblyInfo.cache
 F:\dotnet\blog\obj\Debug\net8.0\blog.RazorAssemblyInfo.cs
 F:\dotnet\blog\bin\Debug\net8.0\blog.staticwebassets.runtime.json
+F:\dotnet\blog\obj\Debug\net8.0\blog.sourcelink.json

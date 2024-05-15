@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1G4Pb/6fOlwunRR1fkYGm6TxeAY0tb4iLOAmTwCAETI=",
+  "Hash": "MKLecVI1Zb1TWQ7Rr/XU1L8hdTwc2OAnBQwGBMju0YA=",
   "Source": "blog",
   "BasePath": "_content/blog",
   "Mode": "Default",
@@ -55,6 +55,25 @@
       "OriginalItemSpec": "wwwroot\\css\\tabler.min.css"
     },
     {
+      "Identity": "F:\\dotnet\\blog\\wwwroot\\favicon.ico",
+      "SourceId": "blog",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\dotnet\\blog\\wwwroot\\",
+      "BasePath": "_content/blog",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
       "Identity": "F:\\dotnet\\blog\\wwwroot\\images\\avatar.jpg",
       "SourceId": "blog",
       "SourceType": "Discovered",
@@ -74,12 +93,12 @@
       "OriginalItemSpec": "wwwroot\\images\\avatar.jpg"
     },
     {
-      "Identity": "F:\\dotnet\\blog\\wwwroot\\images\\favicon.ico",
+      "Identity": "F:\\dotnet\\blog\\wwwroot\\images\\home.svg",
       "SourceId": "blog",
       "SourceType": "Discovered",
       "ContentRoot": "F:\\dotnet\\blog\\wwwroot\\",
       "BasePath": "_content/blog",
-      "RelativePath": "images/favicon.ico",
+      "RelativePath": "images/home.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -90,7 +109,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\favicon.ico"
+      "OriginalItemSpec": "wwwroot\\images\\home.svg"
     },
     {
       "Identity": "F:\\dotnet\\blog\\wwwroot\\images\\logo.svg",
@@ -148,6 +167,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\tabler.min.js"
+    },
+    {
+      "Identity": "F:\\dotnet\\blog\\wwwroot\\uploads\\8aa45e31-1ae9-47e1-86bf-9115376ad469.png",
+      "SourceId": "blog",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\dotnet\\blog\\wwwroot\\",
+      "BasePath": "_content/blog",
+      "RelativePath": "uploads/8aa45e31-1ae9-47e1-86bf-9115376ad469.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\8aa45e31-1ae9-47e1-86bf-9115376ad469.png"
+    },
+    {
+      "Identity": "F:\\dotnet\\blog\\wwwroot\\uploads\\944c5aa9-6e4f-4993-b245-b19883dd6646.png",
+      "SourceId": "blog",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\dotnet\\blog\\wwwroot\\",
+      "BasePath": "_content/blog",
+      "RelativePath": "uploads/944c5aa9-6e4f-4993-b245-b19883dd6646.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\944c5aa9-6e4f-4993-b245-b19883dd6646.png"
     }
   ]
 }

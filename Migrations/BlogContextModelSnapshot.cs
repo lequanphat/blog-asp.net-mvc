@@ -21,7 +21,7 @@ namespace blog.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
-            modelBuilder.Entity("Blog.Models.Blog", b =>
+            modelBuilder.Entity("Blog.Models.Post", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -39,7 +39,7 @@ namespace blog.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Blogs");
+                    b.ToTable("Posts");
                 });
 #pragma warning restore 612, 618
         }

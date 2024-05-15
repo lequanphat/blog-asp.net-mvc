@@ -1,6 +1,9 @@
+@using Blog.Models
+@model IEnumerable<Post>
 @{
     Layout = "_Layout";
 }
+
 <!-- Page header -->
 <div class="page-header d-print-none">
     <div class="container-xl">
@@ -17,8 +20,7 @@
             <!-- Page title actions -->
             <div class="col-auto ms-auto d-print-none">
                 <div class="btn-list">
-                    <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal"
-                        data-bs-target="#modal-report">
+                    <a href="/posts/create" class="btn btn-primary d-none d-sm-inline-block">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                             stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
                             stroke-linejoin="round">
@@ -28,8 +30,7 @@
                         </svg>
                         Create new post
                     </a>
-                    <a href="#" class="btn btn-primary d-sm-none btn-icon" data-bs-toggle="modal"
-                        data-bs-target="#modal-report" aria-label="Create new report">
+                    <a href="/posts/create" class="btn btn-primary d-sm-none btn-icon" aria-label="Create new report">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                             stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
                             stroke-linejoin="round">
@@ -47,117 +48,48 @@
 <div class="page-body">
     <div class="container-xl">
         <div class="row row-cards">
-            <div class="col-sm-6 col-lg-4">
-                <div class="card card-sm">
-                    <a href="#" class="d-block"><img src="~/images/photo.jpg" class="card-img-top"></a>
-                    <div class="card-body">
-                        <div class="d-flex align-items-center">
-                            <span class="avatar me-3 rounded" style="background-image: url(./images/avatar.jpg)"></span>
-                            <div>
-                                <div>Maryjo Lebarree</div>
-                                <div class="text-muted">3 days ago</div>
-                            </div>
-                            <div class="ms-auto">
-                                <a href="#" class="text-muted">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-                                        <path
-                                            d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
-                                    </svg>
-                                    405
-                                </a>
-                                <a href="#" class="ms-3 text-muted">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-filled text-red" width="24"
-                                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path
-                                            d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                                    </svg>
-                                    23
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="card card-sm">
-                    <a href="#" class="d-block"><img src="~/images/photo.jpg" class="card-img-top"></a>
-                    <div class="card-body">
-                        <div class="d-flex align-items-center">
-                            <span class="avatar me-3 rounded">HS</span>
-                            <div>
-                                <div>Haskel Shelper</div>
-                                <div class="text-muted">2 days ago</div>
-                            </div>
-                            <div class="ms-auto">
-                                <a href="#" class="text-muted">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-                                        <path
-                                            d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
-                                    </svg>
-                                    383
-                                </a>
-                                <a href="#" class="ms-3 text-muted">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-filled text-red" width="24"
-                                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path
-                                            d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                                    </svg>
-                                    37
-                                </a>
+            @foreach (var post in Model)
+            {
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card card-sm">
+                        <a href="#" class="d-block"><img src="~/images/photo.jpg" class="card-img-top"></a>
+                        <div class="card-body">
+                            <p class="card-title mb-1">@post.Title</p>
+                            <p class="truncate-3-lines">@post.Content</p>
+                            <div class="d-flex align-items-center">
+                                <span class="avatar me-3 rounded">HS</span>
+                                <div>
+                                    <div>Haskel Shelper</div>
+                                    <div class="text-muted">2 days ago</div>
+                                </div>
+                                <div class="ms-auto">
+                                    <a href="#" class="text-muted">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                            <path
+                                                d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                        </svg>
+                                        383
+                                    </a>
+                                    <a href="#" class="ms-3 text-muted">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-filled text-red" width="24"
+                                            height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                        </svg>
+                                        37
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="card card-sm">
-                    <a href="#" class="d-block"><img src="~/images/photo.jpg" class="card-img-top"></a>
-                    <div class="card-body">
-                        <div class="d-flex align-items-center">
-                            <span class="avatar me-3 rounded" style="background-image: url(./images/avatar.jpg)"></span>
-                            <div>
-                                <div>Lorry Mion</div>
-                                <div class="text-muted">5 days ago</div>
-                            </div>
-                            <div class="ms-auto">
-                                <a href="#" class="text-muted">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-                                        <path
-                                            d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
-                                    </svg>
-                                    424
-                                </a>
-                                <a href="#" class="ms-3 text-muted">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path
-                                            d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                                    </svg>
-                                    45
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </div>

@@ -7,6 +7,6 @@ namespace Blog.Models
             : base(options)
         {
         }
-        public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Post> Posts { get; set; }
     }
 }

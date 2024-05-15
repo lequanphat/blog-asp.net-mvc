@@ -1,0 +1,97 @@
+@{
+    Layout = "_Layout";
+}
+@model CreatePostDto
+<!-- Page header -->
+<div class="page-header d-print-none">
+    <div class="container-xl">
+        <div class="row g-2 align-items-center">
+            <div class="col">
+                <!-- Page pre-title -->
+                <div class="page-pretitle">
+                    Overview
+                </div>
+                <h2 class="page-title">
+                    @ViewData["Title"]
+                </h2>
+            </div>
+            <!-- Page title actions -->
+            <div class="col-auto ms-auto d-print-none">
+                <div class="btn-list">
+                    <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal"
+                        data-bs-target="#modal-report">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                            stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 5l0 14" />
+                            <path d="M5 12l14 0" />
+                        </svg>
+                        Create new post
+                    </a>
+                    <a href="#" class="btn btn-primary d-sm-none btn-icon" data-bs-toggle="modal"
+                        data-bs-target="#modal-report" aria-label="Create new report">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                            stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 5l0 14" />
+                            <path d="M5 12l14 0" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page body -->
+<div class="page-body">
+    <div class="container-xl">
+        <div class="col-md-6 mx-auto">
+            <form class="card" method="post" asp-controller="Posts" asp-action="Create" enctype="multipart/form-data">
+
+                <div class="card-header">
+                    <h3 class="card-title">Create post form</h3>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <div class="mb-3">
+                            <a href="#" class="d-block mb-3"><img id="preview" src=""
+                                    class="card-img-top"></a>
+                            <input id="file-input" type="file" accept=".jpg, .jpeg, .png" class="form-control"
+                                name="Image" placeholder="Upload image">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label required">Post title</label>
+                        <div>
+                            <input type="text" class="form-control" name="Title" placeholder="Enter post title">
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label required">Post description</label>
+                        <div>
+                            <textarea class="form-control" name="Description" rows="6" placeholder="Content.."
+                                spellcheck="false" style="height: 177px;"></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-end">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById('file-input').addEventListener('change', function (e) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            document.getElementById('preview').src = e.target.result;
+        }
+        reader.readAsDataURL(e.target.files[0]);
+    });
+</script>

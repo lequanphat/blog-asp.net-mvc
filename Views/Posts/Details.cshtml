@@ -35,45 +35,107 @@
 <div class="page-body">
     <div class="container-xl">
         <div class="row row-cards">
-            <div class="col-sm-12 col-lg-6 mx-auto">
-                    <div class="card card-sm">
-                        <a href="#" class="d-block"><img src="@Model.Image" class="card-img-top"></a>
-                        <div class="card-body">
-                            <a href="#"  class="card-title mb-1 ">@Model.Title</a>
-                            <p class="">@Model.Content</p>
-                            <div class="d-flex align-items-center">
-                                <span class="avatar me-3 rounded" style="background-image: url(@Model.CreatedBy.Avatar)"></span>
-                                <div>
-                                    <div>@Model.CreatedBy.Name</div>
-                                    <div class="text-muted">@Model.CreatedAt</div>
-                                </div>
-                                <div class="ms-auto">
-                                    <a href="#" class="text-muted">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                            <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-                                            <path
-                                                d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
-                                        </svg>
-                                        383
-                                    </a>
-                                    <a href="#" class="ms-3 text-muted">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-filled text-red" width="24"
-                                            height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                            fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                            <path
-                                                d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                                        </svg>
-                                        37
-                                    </a>
-                                </div>
+            <div class="col-sm-12 col-lg-6">
+                <div class="card card-sm">
+                    <a href="#" class="d-block"><img src="@Model.Image" class="card-img-top"></a>
+                    <div class="card-body">
+                        <a href="#" class="card-title mb-1 ">@Model.Title</a>
+                        <p class="">@Model.Content</p>
+                        <div class="d-flex align-items-center">
+                            <span class="avatar me-3 rounded"
+                                style="background-image: url(@Model.CreatedBy.Avatar)"></span>
+                            <div>
+                                <div>@Model.CreatedBy.Name</div>
+                                <div class="text-muted">@Model.CreatedAt</div>
+                            </div>
+                            <div class="ms-auto">
+                                <a href="#" class="text-muted">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                        <path
+                                            d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                    </svg>
+                                    383
+                                </a>
+                                <a href="#" class="ms-3 text-muted">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-filled text-red" width="24"
+                                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                    </svg>
+                                    37
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+                <div class="row row-cards">
+                    <h3 class="mb-0">Comments</h3>
+                    <div class="space-y">
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-auto">
+                                    <div class="pt-3 pb-1 px-3">
+                                        <div class="avatar " style="background-image: url(https://preview.tabler.io/static/avatars/002m.jpg)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card-body ps-0">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <h4 class="mb-0">Mallory Hulme</h4>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="mb-0 text-muted text-end ">12 giờ trước</p>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0 text-muted ">Lequanphat@gmail.com</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row px-3">
+                                <p class="text-muted ">Ấ đù Ronaldo Đá ghê v</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="row g-0">
+                                <div class="col-auto">
+                                    <div class="pt-3 pb-1 px-3">
+                                        <div class="avatar " style="background-image: url(https://preview.tabler.io/static/avatars/000m.jpg)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card-body ps-0">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <h4 class="mb-0">Paweł Kuna</h4>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="mb-0 text-muted text-end ">12 giờ trước</p>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0 text-muted ">Lequanphat@gmail.com</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row px-3">
+                                <p class="text-muted ">Ronaldo thật đẳng cấp, Tôi fan Ronaldo 20 năm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

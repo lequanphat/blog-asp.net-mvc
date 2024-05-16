@@ -4,24 +4,24 @@ using Microsoft.AspNetCore.Mvc;
 namespace Blog.Controllers
 {
     [Route("[controller]")]
-    public class PostsController : Controller
+    public class UsersController : Controller
     {
         private readonly BlogContext _context;
-        public PostsController(BlogContext context)
+        public UsersController(BlogContext context)
         {
             _context = context;
         }
         [HttpGet]
         public ActionResult Index()
         {
-            ViewData["Title"] = "Posts";
-            var posts = _context.Posts.ToList();
-            return View(posts);
+            ViewData["Title"] = "Users";
+             var users = _context.Users.ToList();
+            return View(users);
         }
         [HttpGet("create")]
         public ActionResult Create()
         {
-            ViewData["Title"] = "Create New Post";
+            ViewData["Title"] = "Create New User";
             return View();
         }
 
@@ -30,7 +30,7 @@ namespace Blog.Controllers
         {
             if (!ModelState.IsValid)
             {
-                ViewData["Title"] = "Create New Post";
+                ViewData["Title"] = "Create New User";
                 return View(model);
             }
             // var post = new Post

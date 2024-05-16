@@ -17,8 +17,7 @@ namespace Blog.Controllers
         public ActionResult Index()
         {
             ViewData["Title"] = "Users";
-             var users = _context.Users.ToList();
-            return View(users);
+            return View();
         }
         [HttpGet("create")]
         public ActionResult Create()

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MKLecVI1Zb1TWQ7Rr/XU1L8hdTwc2OAnBQwGBMju0YA=",
+  "Hash": "il3pD/87Q2BD/dgaIZ35jomEZxz8XbuXU7L9rLmlCWw=",
   "Source": "blog",
   "BasePath": "_content/blog",
   "Mode": "Default",
@@ -169,12 +169,12 @@
       "OriginalItemSpec": "wwwroot\\js\\tabler.min.js"
     },
     {
-      "Identity": "F:\\dotnet\\blog\\wwwroot\\uploads\\8aa45e31-1ae9-47e1-86bf-9115376ad469.png",
+      "Identity": "F:\\dotnet\\blog\\wwwroot\\uploads\\f09d4eac-66ef-4d98-b161-fa6738e099b8.png",
       "SourceId": "blog",
       "SourceType": "Discovered",
       "ContentRoot": "F:\\dotnet\\blog\\wwwroot\\",
       "BasePath": "_content/blog",
-      "RelativePath": "uploads/8aa45e31-1ae9-47e1-86bf-9115376ad469.png",
+      "RelativePath": "uploads/f09d4eac-66ef-4d98-b161-fa6738e099b8.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -185,26 +185,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\8aa45e31-1ae9-47e1-86bf-9115376ad469.png"
-    },
-    {
-      "Identity": "F:\\dotnet\\blog\\wwwroot\\uploads\\944c5aa9-6e4f-4993-b245-b19883dd6646.png",
-      "SourceId": "blog",
-      "SourceType": "Discovered",
-      "ContentRoot": "F:\\dotnet\\blog\\wwwroot\\",
-      "BasePath": "_content/blog",
-      "RelativePath": "uploads/944c5aa9-6e4f-4993-b245-b19883dd6646.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\944c5aa9-6e4f-4993-b245-b19883dd6646.png"
+      "OriginalItemSpec": "wwwroot\\uploads\\f09d4eac-66ef-4d98-b161-fa6738e099b8.png"
     }
   ]
 }

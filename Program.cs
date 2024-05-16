@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Blog.Models;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAuthentication(options =>
@@ -16,8 +17,10 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<BlogContext>(opt =>
-    opt.UseMySql("Server=localhost;Database=blog-app;User=root;Password=;", 
+    opt.UseMySql("Server=localhost;Database=blog_app;User=root;Password=;", 
         new MySqlServerVersion(new Version(8, 0, 21))));
+
+
 
 builder.Services.AddControllers();
 var app = builder.Build();

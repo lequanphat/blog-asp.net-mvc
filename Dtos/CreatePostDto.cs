@@ -12,4 +12,7 @@ public class CreatePostDto
 
     [Required(ErrorMessage = "The image is required.")]
     public required IFormFile Image { get; set; }
+
+    [Required(ErrorMessage = "The category is required.")]
+    public required int CategoryId { get; set; }
 }

@@ -33,12 +33,8 @@
       "PackagePath": "staticwebassets\\js\\tabler.min.js"
     },
     {
-      "Id": "F:\\dotnet\\blog\\wwwroot\\uploads\\8aa45e31-1ae9-47e1-86bf-9115376ad469.png",
-      "PackagePath": "staticwebassets\\uploads\\8aa45e31-1ae9-47e1-86bf-9115376ad469.png"
-    },
-    {
-      "Id": "F:\\dotnet\\blog\\wwwroot\\uploads\\944c5aa9-6e4f-4993-b245-b19883dd6646.png",
-      "PackagePath": "staticwebassets\\uploads\\944c5aa9-6e4f-4993-b245-b19883dd6646.png"
+      "Id": "F:\\dotnet\\blog\\wwwroot\\uploads\\f09d4eac-66ef-4d98-b161-fa6738e099b8.png",
+      "PackagePath": "staticwebassets\\uploads\\f09d4eac-66ef-4d98-b161-fa6738e099b8.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.blog.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -16,14 +16,9 @@ namespace Blog.Controllers
         {
             _context = context;
         }
-        
         [HttpGet("login")]
         public ActionResult Login()
         {
-             if (User.Identity.IsAuthenticated)
-            {
-                return RedirectToAction("Index", "Home");
-            }
             ViewData["Title"] = "Login";
             return View();
         }
@@ -51,16 +46,17 @@ namespace Blog.Controllers
                 _context.Users.Add(user);
                 _context.SaveChanges();
             }
+
             return RedirectToAction("Index", "Home");
         }
 
         [HttpGet("logout")]
         [Authorize]
-        public async Task<IActionResult> Logout()
+        public ActionResult Logout()
         {
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            HttpContext.SignOutAsync(GoogleDefaults.AuthenticationScheme);
             return RedirectToAction("Login");
         }
-
     }
 }

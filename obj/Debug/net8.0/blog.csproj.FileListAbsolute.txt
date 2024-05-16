@@ -252,3 +252,9 @@ F:\dotnet\blog\obj\Debug\net8.0\blog.RazorAssemblyInfo.cs
 F:\dotnet\blog\bin\Debug\net8.0\blog.staticwebassets.runtime.json
 F:\dotnet\blog\obj\Debug\net8.0\blog.sourcelink.json
 F:\dotnet\blog\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.Google.dll
+F:\dotnet\blog\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+F:\dotnet\blog\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+F:\dotnet\blog\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+F:\dotnet\blog\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+F:\dotnet\blog\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+F:\dotnet\blog\bin\Debug\net8.0\Microsoft.Extensions.Options.dll

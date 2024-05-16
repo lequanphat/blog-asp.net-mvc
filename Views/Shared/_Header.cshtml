@@ -1,3 +1,4 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 <header class="navbar navbar-expand-md d-print-none">
     <div class="container-xl">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu"
@@ -64,7 +65,7 @@
                     aria-label="Open user menu">
                     <span class="avatar avatar-sm" style="background-image: url(../images/avatar.jpg)"></span>
                     <div class="d-none d-xl-block ps-2">
-                        <div>Paweł Kuna</div>
+                        <div>@User.Identity.Name</div>
                         <div class="mt-1 small text-muted">UI Designer</div>
                     </div>
                 </a>
@@ -74,7 +75,7 @@
                     <a href="#" class="dropdown-item">Feedback</a>
                     <div class="dropdown-divider"></div>
                     <a href="./settings.html" class="dropdown-item">Settings</a>
-                    <a href="./sign-in.html" class="dropdown-item text-danger">Logout</a>
+                    <a asp-controller="Auth" asp-action="Logout" class="dropdown-item text-danger">Logout</a>
                 </div>
             </div>
         </div>

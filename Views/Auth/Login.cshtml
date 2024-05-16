@@ -1,0 +1,15 @@
+<!doctype html>
+
+<html lang="en">
+@await Html.PartialAsync("_Head")
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<body>
+    <div class="page">
+        <div class="p-4 m-4">
+            <a class="btn btn-primary" asp-controller="Auth" asp-action="GoogleLogin">Log in with Google</a>
+        </div>
+    </div>
+    <script src="~/js/tabler.min.js"></script>
+</body>
+
+</html>

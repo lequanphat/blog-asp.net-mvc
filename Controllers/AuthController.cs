@@ -31,11 +31,10 @@ namespace Blog.Controllers
 
         public async Task<IActionResult> GoogleResponse(){
             var result = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            
             var claims = result.Principal.Identities.FirstOrDefault().Claims;
-            var avatar = claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+            var avatar = claims.FirstOrDefault(c => c.Type == "picture")?.Value;
             var email = claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
-            var fullname = claims.FirstOrDefault(c => c.Type == ClaimTypes.GivenName)?.Value;
+            var fullname = claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
             var user = _context.Users.FirstOrDefault(u => u.Email == email);
             if(user == null){
                 user = new User{
@@ -46,17 +45,16 @@ namespace Blog.Controllers
                 _context.Users.Add(user);
                 _context.SaveChanges();
             }
-
             return RedirectToAction("Index", "Home");
         }
 
         [HttpGet("logout")]
         [Authorize]
-        public ActionResult Logout()
+        public async Task<IActionResult> Logout()
         {
-            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            HttpContext.SignOutAsync(GoogleDefaults.AuthenticationScheme);
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Login");
         }
+        
     }
 }

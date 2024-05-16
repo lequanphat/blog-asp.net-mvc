@@ -8,7 +8,8 @@
     <div class="page">
         <!-- Navbar -->
         @await Html.PartialAsync("_Header")
-        @await Html.PartialAsync("_Menu")
+        @* @await Html.PartialAsync("_Menu") *@
+        @await Component.InvokeAsync("Menu")
         <div class="page-wrapper">
             @RenderBody()
             @await Html.PartialAsync("_Footer")

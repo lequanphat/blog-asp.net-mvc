@@ -12,81 +12,80 @@
                 <!-- Page pre-title -->
                 <div class="page-pretitle">
                     Overview
-    using Blog.Models;
-#line default
-e default
-            <h2 class="page-title">
+                </div>
+                <h2 class="page-title">
                     @ViewData["Title"]
                 </h2>
             </div>
         </div>
     </div>
-</div>
-<!-- Page body -->
-<div class="page-body">
-    <div class="container-xl">
-        <div class="col-md-6 mx-auto">
-            <form class="card" method="post" asp-controller="Posts" asp-action="Create" enctype="multipart/form-data">
+    <!-- Page body -->
+    <div class="page-body">
+        <div class="container-xl">
+            <div class="col-md-6 mx-auto">
+                <form class="card" method="post" asp-controller="Posts" asp-action="Create"
+                    enctype="multipart/form-data">
 
-                <div class="card-header">
-                    <h3 class="card-title">Create post form</h3>
-                </div>
-                <div class="card-body">
-                    <div class="mb-3">
+                    <div class="card-header">
+                        <h3 class="card-title">Create post form</h3>
+                    </div>
+                    <div class="card-body">
                         <div class="mb-3">
-                            <a href="#" class="d-block mb-3"><img id="preview" src="" class="card-img-top"></a>
-                            <input id="file-input" type="file" accept=".jpg, .jpeg, .png"
-                                class="form-control @(ViewData.ModelState["Image"]?.Errors.Count > 0 ? "is-invalid" : "")"
-                                asp-for="Image" placeholder="Upload image">
-                            <span asp-validation-for="Image" class="invalid-feedback"></span>
+                            <div class="mb-3">
+                                <a href="#" class="d-block mb-3"><img id="preview" src="" class="card-img-top"></a>
+                                <input id="file-input" type="file" accept=".jpg, .jpeg, .png"
+                                    class="form-control @(ViewData.ModelState["Image"]?.Errors.Count > 0 ? "is-invalid" : "")"
+                                    asp-for="Image" placeholder="Upload image">
+                                <span asp-validation-for="Image" class="invalid-feedback"></span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="form-label">Category</div>
-                        <select class="form-select" asp-for="CategoryId">
-                            @{
-                                var categories = ViewData["Categories"] as List<Category>;
-                            }
+                        <div class="mb-3">
+                            <div class="form-label">Category</div>
+                            <select class="form-select" asp-for="CategoryId">
+                                @{
+                                    var categories = ViewData["Categories"] as List<Category>;
+                                }
 
-                            @foreach (var category in categories)
-                            {
-                                <option value="@category.Id">@category.Name</option>
-                            }
-                        </select>
-                        <span asp-validation-for="CategoryId" class="invalid-feedback"></span>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label required">Post title</label>
-                        <div>
-                            <input asp-for="Title" type="text"
-                                class="form-control @(ViewData.ModelState["Title"]?.Errors.Count > 0 ? "is-invalid" : "")"
-                                placeholder="Enter post title">
-                            <span asp-validation-for="Title" class="invalid-feedback"></span>
+                                @foreach (var category in categories)
+                                {
+                                    <option value="@category.Id">@category.Name</option>
+                                }
+                            </select>
+                            <span asp-validation-for="CategoryId" class="invalid-feedback"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label required">Post title</label>
+                            <div>
+                                <input asp-for="Title" type="text"
+                                    class="form-control @(ViewData.ModelState["Title"]?.Errors.Count > 0 ? "is-invalid" : "")"
+                                    placeholder="Enter post title">
+                                <span asp-validation-for="Title" class="invalid-feedback"></span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label required">Post description</label>
+                            <div>
+                                <textarea asp-for="Description"
+                                    class="form-control @(ViewData.ModelState["Description"]?.Errors.Count > 0 ? "is-invalid" : "")"
+                                    rows="6" placeholder="Content.." spellcheck="false"
+                                    style="height: 177px;"></textarea>
+                                <span asp-validation-for="Description" class="invalid-feedback"></span>
+                            </div>
                         </div>
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label required">Post description</label>
-                        <div>
-                            <textarea asp-for="Description"
-                                class="form-control @(ViewData.ModelState["Description"]?.Errors.Count > 0 ? "is-invalid" : "")"
-                                rows="6" placeholder="Content.." spellcheck="false" style="height: 177px;"></textarea>
-                            <span asp-validation-for="Description" class="invalid-feedback"></span>
-                        </div>
+                    <div class="card-footer text-end">
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
-                </div>
-                <div class="card-footer text-end">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-<script>
-    document.getElementById('file-input').addEventListener('change', function (e) {
-        var reader = new FileReader();
-        reader.onload = function (e) {
-            document.getElementById('preview').src = e.target.result;
-        }
-        reader.readAsDataURL(e.target.files[0]);
-    });
-</script>
+    <script>
+        document.getElementById('file-input').addEventListener('change', function (e) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById('preview').src = e.target.result;
+            }
+            reader.readAsDataURL(e.target.files[0]);
+        });
+    </script>

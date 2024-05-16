@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\images\\home.svg"
     },
     {
+      "Id": "F:\\dotnet\\blog\\wwwroot\\images\\login.png",
+      "PackagePath": "staticwebassets\\images\\login.png"
+    },
+    {
       "Id": "F:\\dotnet\\blog\\wwwroot\\images\\logo.svg",
       "PackagePath": "staticwebassets\\images\\logo.svg"
     },
@@ -33,8 +37,24 @@
       "PackagePath": "staticwebassets\\js\\tabler.min.js"
     },
     {
-      "Id": "F:\\dotnet\\blog\\wwwroot\\uploads\\f09d4eac-66ef-4d98-b161-fa6738e099b8.png",
-      "PackagePath": "staticwebassets\\uploads\\f09d4eac-66ef-4d98-b161-fa6738e099b8.png"
+      "Id": "F:\\dotnet\\blog\\wwwroot\\uploads\\1f304b5e-7512-4426-b8c4-fbf327f7bc76.png",
+      "PackagePath": "staticwebassets\\uploads\\1f304b5e-7512-4426-b8c4-fbf327f7bc76.png"
+    },
+    {
+      "Id": "F:\\dotnet\\blog\\wwwroot\\uploads\\338daf6a-3e7d-4d62-855e-caf574ef8c43.png",
+      "PackagePath": "staticwebassets\\uploads\\338daf6a-3e7d-4d62-855e-caf574ef8c43.png"
+    },
+    {
+      "Id": "F:\\dotnet\\blog\\wwwroot\\uploads\\6da8380c-f65a-4a33-8d6a-7433438bd0df.png",
+      "PackagePath": "staticwebassets\\uploads\\6da8380c-f65a-4a33-8d6a-7433438bd0df.png"
+    },
+    {
+      "Id": "F:\\dotnet\\blog\\wwwroot\\uploads\\cc74f312-9da9-47ab-b9d4-5ea445cc30df.png",
+      "PackagePath": "staticwebassets\\uploads\\cc74f312-9da9-47ab-b9d4-5ea445cc30df.png"
+    },
+    {
+      "Id": "F:\\dotnet\\blog\\wwwroot\\uploads\\d100ccbe-b19e-4a66-b384-338ba1517a65.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\d100ccbe-b19e-4a66-b384-338ba1517a65.jpeg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.blog.Microsoft.AspNetCore.StaticWebAssets.props",

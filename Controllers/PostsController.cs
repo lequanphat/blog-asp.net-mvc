@@ -1,7 +1,8 @@
+using System.Security.Claims;
 using Blog.Models;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Blog.Controllers
 {
@@ -18,7 +19,8 @@ namespace Blog.Controllers
         public ActionResult Index()
         {
             ViewData["Title"] = "Posts";
-            var posts = _context.Posts.ToList();
+            Console.WriteLine(HttpContext.User.FindFirst("IsAdmin")?.Value);
+            var posts =  _context.Posts.Include(p => p.CreatedBy).ToList();
             return View(posts);
         }
         [HttpGet("create")]
@@ -49,7 +51,8 @@ namespace Blog.Controllers
                     await Image.CopyToAsync(stream);
                 }
                 path = "/uploads/" + uniqueFileName;
-                var user = _context.Users.FirstOrDefault(u => u.Id == 1);
+                var email = HttpContext.User.FindFirst(ClaimTypes.Email)?.Value;
+                var user = _context.Users.FirstOrDefault(u => u.Email == email);
                 var selectedCategory = _context.Categories.Find(model.CategoryId);
                 var post = new Post
                 {
@@ -66,9 +69,11 @@ namespace Blog.Controllers
         }
 
         [HttpGet("{id}")]
-        public string Get(int id)
+        public ActionResult Details(int id)
         {
-            return "value" + id;
+            ViewData["Title"] = "Posts Details";
+            var post =  _context.Posts.Include(p => p.CreatedBy).FirstOrDefault(p => p.Id == id);
+            return View(post);
         }
     }
 }

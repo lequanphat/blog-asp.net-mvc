@@ -1,5 +1,5 @@
 @using Blog.Models
-@model IEnumerable<Post>
+@model Post
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     Layout = "_Layout";
@@ -21,25 +21,11 @@
             <!-- Page title actions -->
             <div class="col-auto ms-auto d-print-none">
                 <div class="btn-list">
-                    <a href="/posts/create" class="btn btn-primary d-none d-sm-inline-block">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
-                            stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M12 5l0 14" />
-                            <path d="M5 12l14 0" />
-                        </svg>
-                        Create new post
-                    </a>
-                    <a href="/posts/create" class="btn btn-primary d-sm-none btn-icon" aria-label="Create new report">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
-                            stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M12 5l0 14" />
-                            <path d="M5 12l14 0" />
-                        </svg>
-                    </a>
+                    <span class="d-none d-sm-inline">
+                        <a href="/posts" class="btn">
+                            Back
+                        </a>
+                    </span>
                 </div>
             </div>
         </div>
@@ -49,22 +35,17 @@
 <div class="page-body">
     <div class="container-xl">
         <div class="row row-cards">
-            @foreach (var post in Model)
-            {
-                <div class="col-sm-6 col-lg-4">
+            <div class="col-sm-12 col-lg-6 mx-auto">
                     <div class="card card-sm">
-                        <a href="/posts/@post.Id" class="d-block">
-                            <img src="@post.Image" class="card-img-top" style="height: 240px;">
-                        </a>
+                        <a href="#" class="d-block"><img src="@Model.Image" class="card-img-top"></a>
                         <div class="card-body">
-                            <a href="/posts/@post.Id" class="card-title mb-1 text-truncate">@post.Title</a>
-                            <p class="truncate-3-lines">@post.Content</p>
+                            <a href="#"  class="card-title mb-1 ">@Model.Title</a>
+                            <p class="">@Model.Content</p>
                             <div class="d-flex align-items-center">
-                                <span class="avatar me-3 rounded"
-                                    style="background-image: url(@post.CreatedBy.Avatar)"></span>
+                                <span class="avatar me-3 rounded" style="background-image: url(@Model.CreatedBy.Avatar)"></span>
                                 <div>
-                                    <div>@post.CreatedBy.Name</div>
-                                    <div class="text-muted">@post.CreatedAt</div>
+                                    <div>@Model.CreatedBy.Name</div>
+                                    <div class="text-muted">@Model.CreatedAt</div>
                                 </div>
                                 <div class="ms-auto">
                                     <a href="#" class="text-muted">
@@ -93,7 +74,6 @@
                         </div>
                     </div>
                 </div>
-            }
         </div>
     </div>
 </div>

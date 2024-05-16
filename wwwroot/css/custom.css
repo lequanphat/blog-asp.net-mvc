@@ -11,4 +11,5 @@ body {
       -webkit-box-orient: vertical;  
       overflow: hidden;
       text-overflow: ellipsis;
-      }
+      min-height: 64px;
+}

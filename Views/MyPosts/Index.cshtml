@@ -1,6 +1,5 @@
 @using Blog.Models
 @model IEnumerable<Post>
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     Layout = "_Layout";
 }
@@ -53,11 +52,11 @@
             {
                 <div class="col-sm-6 col-lg-4">
                     <div class="card card-sm">
-                        <a href="/posts/@post.Id" class="d-block">
+                        <a href="#" class="d-block">
                             <img src="@post.Image" class="card-img-top" style="height: 240px;">
                         </a>
                         <div class="card-body">
-                            <a href="/posts/@post.Id" class="card-title mb-1 text-truncate">@post.Title</a>
+                            <p class="card-title mb-1 text-truncate">@post.Title</p>
                             <p class="truncate-3-lines">@post.Content</p>
                             <div class="d-flex align-items-center">
                                 <span class="avatar me-3 rounded"

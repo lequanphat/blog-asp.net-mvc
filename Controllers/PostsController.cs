@@ -19,8 +19,7 @@ namespace Blog.Controllers
         public ActionResult Index()
         {
             ViewData["Title"] = "Posts";
-            Console.WriteLine(HttpContext.User.FindFirst("IsAdmin")?.Value);
-            var posts =  _context.Posts.Include(p => p.CreatedBy).ToList();
+            var posts =  _context.Posts.Include(p => p.CreatedBy).OrderByDescending(p => p.CreatedAt).ToList();
             return View(posts);
         }
         [HttpGet("create")]
@@ -72,7 +71,14 @@ namespace Blog.Controllers
         public ActionResult Details(int id)
         {
             ViewData["Title"] = "Posts Details";
-            var post =  _context.Posts.Include(p => p.CreatedBy).FirstOrDefault(p => p.Id == id);
+            var post =  _context.Posts.Include(p => p.CreatedBy)
+            .Include(p => p.Comments)
+            .ThenInclude(c => c.CreatedBy)
+            .FirstOrDefault(p => p.Id == id);
+            if (post != null)
+            {
+                post.Comments = post.Comments.OrderByDescending(c => c.CreatedAt).ToList();
+            }
             return View(post);
         }
     }

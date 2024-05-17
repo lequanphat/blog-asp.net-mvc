@@ -19,6 +19,9 @@ namespace Blog.Controllers
         [HttpGet("login")]
         public ActionResult Login()
         {
+            if(User.Identity.IsAuthenticated){
+                return RedirectToAction("Index", "Home");
+            }
             ViewData["Title"] = "Login";
             return View();
         }

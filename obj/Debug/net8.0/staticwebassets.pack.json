@@ -37,16 +37,36 @@
       "PackagePath": "staticwebassets\\js\\tabler.min.js"
     },
     {
+      "Id": "F:\\dotnet\\blog\\wwwroot\\uploads\\1d3ec965-0464-4135-8dda-e3b39cbb31db.png",
+      "PackagePath": "staticwebassets\\uploads\\1d3ec965-0464-4135-8dda-e3b39cbb31db.png"
+    },
+    {
       "Id": "F:\\dotnet\\blog\\wwwroot\\uploads\\1f304b5e-7512-4426-b8c4-fbf327f7bc76.png",
       "PackagePath": "staticwebassets\\uploads\\1f304b5e-7512-4426-b8c4-fbf327f7bc76.png"
+    },
+    {
+      "Id": "F:\\dotnet\\blog\\wwwroot\\uploads\\28e3ea45-dea9-4522-9128-6657633d2d8f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\28e3ea45-dea9-4522-9128-6657633d2d8f.jpg"
     },
     {
       "Id": "F:\\dotnet\\blog\\wwwroot\\uploads\\338daf6a-3e7d-4d62-855e-caf574ef8c43.png",
       "PackagePath": "staticwebassets\\uploads\\338daf6a-3e7d-4d62-855e-caf574ef8c43.png"
     },
     {
+      "Id": "F:\\dotnet\\blog\\wwwroot\\uploads\\42fb022a-8ad1-4b4e-a4dd-ee32f4962a98.jpg",
+      "PackagePath": "staticwebassets\\uploads\\42fb022a-8ad1-4b4e-a4dd-ee32f4962a98.jpg"
+    },
+    {
+      "Id": "F:\\dotnet\\blog\\wwwroot\\uploads\\53f9d47c-1cd2-4c49-985a-c8586182b55b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\53f9d47c-1cd2-4c49-985a-c8586182b55b.jpg"
+    },
+    {
       "Id": "F:\\dotnet\\blog\\wwwroot\\uploads\\6da8380c-f65a-4a33-8d6a-7433438bd0df.png",
       "PackagePath": "staticwebassets\\uploads\\6da8380c-f65a-4a33-8d6a-7433438bd0df.png"
+    },
+    {
+      "Id": "F:\\dotnet\\blog\\wwwroot\\uploads\\9a22a76f-53b6-46be-878d-e008a636f1bf.png",
+      "PackagePath": "staticwebassets\\uploads\\9a22a76f-53b6-46be-878d-e008a636f1bf.png"
     },
     {
       "Id": "F:\\dotnet\\blog\\wwwroot\\uploads\\cc74f312-9da9-47ab-b9d4-5ea445cc30df.png",
@@ -55,6 +75,10 @@
     {
       "Id": "F:\\dotnet\\blog\\wwwroot\\uploads\\d100ccbe-b19e-4a66-b384-338ba1517a65.jpeg",
       "PackagePath": "staticwebassets\\uploads\\d100ccbe-b19e-4a66-b384-338ba1517a65.jpeg"
+    },
+    {
+      "Id": "F:\\dotnet\\blog\\wwwroot\\uploads\\f368f8a5-12ac-4d14-92ec-1135e4557188.jpg",
+      "PackagePath": "staticwebassets\\uploads\\f368f8a5-12ac-4d14-92ec-1135e4557188.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.blog.Microsoft.AspNetCore.StaticWebAssets.props",

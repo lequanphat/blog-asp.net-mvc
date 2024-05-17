@@ -19,7 +19,7 @@ namespace Blog.Controllers
         public ActionResult Index()
         {
             ViewData["Title"] = "Posts";
-            var posts =  _context.Posts.Include(p => p.CreatedBy).Where(p => p.CreatedBy.Email == User.FindFirst(ClaimTypes.Email).Value).ToList();
+            var posts =  _context.Posts.Include(p => p.CreatedBy).OrderByDescending(p => p.CreatedAt).Where(p => p.CreatedBy.Email == User.FindFirst(ClaimTypes.Email).Value).ToList();
             return View(posts);
         }
     }

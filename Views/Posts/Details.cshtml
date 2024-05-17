@@ -77,13 +77,29 @@
             </div>
             <div class="col-sm-12 col-lg-6">
                 <div class="row row-cards">
-                    <h3 class="mb-0">Comments</h3>
+
+                    <h3 class="mb-2">Comments</h3>
+                    <form action="/comments/@Model.Id" method="post" class="row align-items-center">
+                        <div class="col">
+                            <textarea name="Message"  class="form-control" data-bs-toggle="autosize" placeholder="Type something…"
+                                spellcheck="false"
+                                style="overflow: hidden; overflow-wrap: break-word; resize: none; text-align: start; height: 59.6px;"></textarea>
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary">
+                                Send
+                            </button>
+                        </div>
+                    </form>
+
                     <div class="space-y">
-                        <div class="card">
+                        @foreach(var comment in Model.Comments){
+<div class="card">
                             <div class="row g-0">
                                 <div class="col-auto">
                                     <div class="pt-3 pb-1 px-3">
-                                        <div class="avatar " style="background-image: url(https://preview.tabler.io/static/avatars/002m.jpg)">
+                                        <div class="avatar "
+                                            style="background-image: url(@comment.CreatedBy.Avatar)">
                                         </div>
                                     </div>
                                 </div>
@@ -91,49 +107,26 @@
                                     <div class="card-body ps-0">
                                         <div class="row">
                                             <div class="col-8">
-                                                <h4 class="mb-0">Mallory Hulme</h4>
+                                                <h4 class="mb-0">@comment.CreatedBy.Name</h4>
                                             </div>
                                             <div class="col-4">
-                                                <p class="mb-0 text-muted text-end ">12 giờ trước</p>
+                                                <p class="mb-0 text-muted text-end ">@comment.CreatedAt</p>
                                             </div>
                                         </div>
-                                        <p class="mb-0 text-muted ">Lequanphat@gmail.com</p>
+                                        <p class="mb-0 text-muted ">@comment.CreatedBy.Email</p>
                                     </div>
                                 </div>
 
                             </div>
                             <div class="row px-3">
-                                <p class="text-muted ">Ấ đù Ronaldo Đá ghê v</p>
+                                <p class="text-muted ">@comment.Message</p>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="row g-0">
-                                <div class="col-auto">
-                                    <div class="pt-3 pb-1 px-3">
-                                        <div class="avatar " style="background-image: url(https://preview.tabler.io/static/avatars/000m.jpg)">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body ps-0">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <h4 class="mb-0">Paweł Kuna</h4>
-                                            </div>
-                                            <div class="col-4">
-                                                <p class="mb-0 text-muted text-end ">12 giờ trước</p>
-                                            </div>
-                                        </div>
-                                        <p class="mb-0 text-muted ">Lequanphat@gmail.com</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="row px-3">
-                                <p class="text-muted ">Ronaldo thật đẳng cấp, Tôi fan Ronaldo 20 năm</p>
-                            </div>
-                        </div>
+                        }
+                        
+                        
                     </div>
+
                 </div>
             </div>
         </div>

@@ -1,5 +1,6 @@
 using Blog.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Blog.Controllers
@@ -56,20 +57,20 @@ namespace Blog.Controllers
             return View(category);
         }
         [HttpPost("update/{id}")]
-        public async Task<IActionResult> Update(int id, [FromForm] CreateCategoryDto model)
+        public async Task<IActionResult> Update(int id, CreateCategoryDto model)
         {
+            var category = _context.Categories.Find(id);
+            if(category == null)
+            {
+                return NotFound();
+            }
             if (!ModelState.IsValid)
             {
                 ViewData["Title"] = "Update Category";
-                return View();
+                return View(category);
             }
             try
             {
-                var category = _context.Categories.Find(id);
-                if(category == null)
-                {
-                    return NotFound();
-                }
                 category.Name = model.Name;
                 _context.Categories.Update(category);
                 await _context.SaveChangesAsync();
@@ -78,8 +79,9 @@ namespace Blog.Controllers
             {
                 throw;
             }
-            ViewData["Title"] = "Create New Category";
-            return View();
+            ViewData["Title"] = "Update Category";
+            ViewData["success"] = "Category updated successfully";
+            return View(category);
         }
 
         [HttpDelete("{id}")]
@@ -92,7 +94,7 @@ namespace Blog.Controllers
             }
             _context.Categories.Remove(category);
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index");
+            return Ok();
         }
     }
     

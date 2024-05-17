@@ -28,23 +28,22 @@ builder.Services.AddDbContext<BlogContext>(opt =>
         new MySqlServerVersion(new Version(8, 0, 21))));
 
 
-
 builder.Services.AddControllers();
+
 var app = builder.Build();
 
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+
 app.UseRouting();
+
 app.UseAuthentication();
 app.UseAuthorization();
 
-
-app.MapControllers();
-app.UseStaticFiles();
+app.MapRazorPages();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}"
-);
-
-app.MapRazorPages();
+    pattern: "{controller=Auth}/{action=Login}");
 
 app.Run();

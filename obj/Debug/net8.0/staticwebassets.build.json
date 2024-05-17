@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fxjIrUlzGRYI4kqcVBmEN4VUvA99AcjtUj72rzysGQo=",
+  "Hash": "zrY273PAdewyf6kByUPFqIk4gHVAhae3qvSYQTS5r9M=",
   "Source": "blog",
   "BasePath": "_content/blog",
   "Mode": "Default",
@@ -188,6 +188,25 @@
       "OriginalItemSpec": "wwwroot\\js\\tabler.min.js"
     },
     {
+      "Identity": "F:\\dotnet\\blog\\wwwroot\\uploads\\1d3ec965-0464-4135-8dda-e3b39cbb31db.png",
+      "SourceId": "blog",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\dotnet\\blog\\wwwroot\\",
+      "BasePath": "_content/blog",
+      "RelativePath": "uploads/1d3ec965-0464-4135-8dda-e3b39cbb31db.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\1d3ec965-0464-4135-8dda-e3b39cbb31db.png"
+    },
+    {
       "Identity": "F:\\dotnet\\blog\\wwwroot\\uploads\\1f304b5e-7512-4426-b8c4-fbf327f7bc76.png",
       "SourceId": "blog",
       "SourceType": "Discovered",
@@ -205,6 +224,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\1f304b5e-7512-4426-b8c4-fbf327f7bc76.png"
+    },
+    {
+      "Identity": "F:\\dotnet\\blog\\wwwroot\\uploads\\28e3ea45-dea9-4522-9128-6657633d2d8f.jpg",
+      "SourceId": "blog",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\dotnet\\blog\\wwwroot\\",
+      "BasePath": "_content/blog",
+      "RelativePath": "uploads/28e3ea45-dea9-4522-9128-6657633d2d8f.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\28e3ea45-dea9-4522-9128-6657633d2d8f.jpg"
     },
     {
       "Identity": "F:\\dotnet\\blog\\wwwroot\\uploads\\338daf6a-3e7d-4d62-855e-caf574ef8c43.png",
@@ -226,6 +264,44 @@
       "OriginalItemSpec": "wwwroot\\uploads\\338daf6a-3e7d-4d62-855e-caf574ef8c43.png"
     },
     {
+      "Identity": "F:\\dotnet\\blog\\wwwroot\\uploads\\42fb022a-8ad1-4b4e-a4dd-ee32f4962a98.jpg",
+      "SourceId": "blog",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\dotnet\\blog\\wwwroot\\",
+      "BasePath": "_content/blog",
+      "RelativePath": "uploads/42fb022a-8ad1-4b4e-a4dd-ee32f4962a98.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\42fb022a-8ad1-4b4e-a4dd-ee32f4962a98.jpg"
+    },
+    {
+      "Identity": "F:\\dotnet\\blog\\wwwroot\\uploads\\53f9d47c-1cd2-4c49-985a-c8586182b55b.jpg",
+      "SourceId": "blog",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\dotnet\\blog\\wwwroot\\",
+      "BasePath": "_content/blog",
+      "RelativePath": "uploads/53f9d47c-1cd2-4c49-985a-c8586182b55b.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\53f9d47c-1cd2-4c49-985a-c8586182b55b.jpg"
+    },
+    {
       "Identity": "F:\\dotnet\\blog\\wwwroot\\uploads\\6da8380c-f65a-4a33-8d6a-7433438bd0df.png",
       "SourceId": "blog",
       "SourceType": "Discovered",
@@ -243,6 +319,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\6da8380c-f65a-4a33-8d6a-7433438bd0df.png"
+    },
+    {
+      "Identity": "F:\\dotnet\\blog\\wwwroot\\uploads\\9a22a76f-53b6-46be-878d-e008a636f1bf.png",
+      "SourceId": "blog",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\dotnet\\blog\\wwwroot\\",
+      "BasePath": "_content/blog",
+      "RelativePath": "uploads/9a22a76f-53b6-46be-878d-e008a636f1bf.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\9a22a76f-53b6-46be-878d-e008a636f1bf.png"
     },
     {
       "Identity": "F:\\dotnet\\blog\\wwwroot\\uploads\\cc74f312-9da9-47ab-b9d4-5ea445cc30df.png",
@@ -281,6 +376,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\d100ccbe-b19e-4a66-b384-338ba1517a65.jpeg"
+    },
+    {
+      "Identity": "F:\\dotnet\\blog\\wwwroot\\uploads\\f368f8a5-12ac-4d14-92ec-1135e4557188.jpg",
+      "SourceId": "blog",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\dotnet\\blog\\wwwroot\\",
+      "BasePath": "_content/blog",
+      "RelativePath": "uploads/f368f8a5-12ac-4d14-92ec-1135e4557188.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\f368f8a5-12ac-4d14-92ec-1135e4557188.jpg"
     }
   ]
 }

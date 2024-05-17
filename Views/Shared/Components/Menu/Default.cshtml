@@ -62,57 +62,56 @@
                             </span>
                         </a>
                     </li>
-                    @{
-                        if (Model.IsAdmin)
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link" href="/categories">
-                                    <span
-                                        class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            class="icon icon-tabler icons-tabler-outline icon-tabler-category-plus">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                            <path d="M4 4h6v6h-6zm10 0h6v6h-6zm-10 10h6v6h-6zm10 3h6m-3 -3v6" />
-                                        </svg>
-                                    </span>
-                                    <span class="nav-link-title">
-                                        Categories
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/users">
-                                    <span
-                                        class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            class="icon icon-tabler icons-tabler-outline icon-tabler-users">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                            <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
-                                            <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-                                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                                            <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
-                                        </svg>
-                                    </span>
-                                    <span class="nav-link-title">
-                                        Users
-                                    </span>
-                                </a>
-                            </li>
-                        }
+                    @if (Model.IsAdmin)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/categories">
+                                <span
+                                    class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-category-plus">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M4 4h6v6h-6zm10 0h6v6h-6zm-10 10h6v6h-6zm10 3h6m-3 -3v6" />
+                                    </svg>
+                                </span>
+                                <span class="nav-link-title">
+                                    Categories
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/users">
+                                <span
+                                    class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-users">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                                        <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                        <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+                                    </svg>
+                                </span>
+                                <span class="nav-link-title">
+                                    Users
+                                </span>
+                            </a>
+                        </li>
                     }
 
                 </ul>
                 <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">
-                    @{
-                        if(Model.IsAdmin){
-                            <h4 class="m-0 text-muted">Welcome back!  <span class="badge bg-green-lt"> Admin</span></h4>
-                        }else{
-                            <h4 class="m-0 text-muted">Welcome back!  <span class="badge bg-purple-lt"> User</span></h4>
-                        }
+                    @if (Model.IsAdmin)
+                    {
+                        <h4 class="m-0 text-muted">Welcome back! <span class="badge bg-green-lt"> Admin</span></h4>
+                    }
+                    else
+                    {
+                        <h4 class="m-0 text-muted">Welcome back! <span class="badge bg-purple-lt"> User</span></h4>
                     }
                 </div>
             </div>
